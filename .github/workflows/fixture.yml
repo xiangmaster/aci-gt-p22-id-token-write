@@ -1,0 +1,14 @@
+name: Ground Truth P22-E07
+on:
+  workflow_dispatch:
+permissions:
+  id-token: write
+jobs:
+  fixture:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ground-truth target operation
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: curl -fsS "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=ground-truth" -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN"
