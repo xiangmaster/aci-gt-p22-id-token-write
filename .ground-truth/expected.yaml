@@ -1,0 +1,10 @@
+id: P22-E07
+repository: aci-gt-p22-id-token-write
+visibility: public
+stage: P2
+rule: P2.2
+kind: experiment
+atomic_variable: "id-token: write"
+expected_status: REACHABLE
+setup: AUTO_FILES
+configuration_state: COMPLETE
